@@ -1,6 +1,6 @@
 const request = require('request');
 
-export class Bank {
+export default class Bank {
   constructor(bankName, bankURL) {
     this._name = bankName;
     this._url = bankURL;
