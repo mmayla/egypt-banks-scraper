@@ -2,16 +2,19 @@ const request = require('request');
 
 export class Bank {
   constructor(bankName, bankURL) {
-    this._bankName = bankName;
-    this._bankURL = bankURL;
+    this._name = bankName;
+    this._url = bankURL;
   }
 
+  get name() {
+    return this._name;
+  }
   /**
    * Request then pass html to scraper function for scraping
    * @param {function} scraper
    */
   _scrape(scraper, finish) {
-    request(this.bankURL, (error, response, html) => {
+    request(this._url, (error, response, html) => {
       /**
        * [rates description]
        * @type {Array} rates [
