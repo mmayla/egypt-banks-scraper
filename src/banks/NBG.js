@@ -1,6 +1,6 @@
 // const cheerio = require('cheerio');
 
-import Bank from './bank';
+import Bank from './Bank';
 import { NBG_NAME } from './banks_names';
 
 export default class NBG extends Bank {
