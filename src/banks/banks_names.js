@@ -1,1 +1,1 @@
-export const NBG = 'nbg';
+export const NBG_NAME = 'nbg';
