@@ -22,7 +22,8 @@
     "lint:fix": "npm run lint -- --fix",
     "test": "mocha tests --compilers js:babel-register",
     "test:dev": "npm run test -- --watch",
-    "prepublish": "npm run clean & npm run build"
+    "prepublish": "npm run clean & npm run build",
+    "start": "babel-node src/index.js"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
