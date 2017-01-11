@@ -10,7 +10,7 @@ export default class Bank {
    * Request then pass html to scraper function for scraping
    * @param {function} scraper
    */
-  _scrape(scraper, finish) {
+  scrape(scraper, finish) {
     request(this.url, (error, response, html) => {
       /**
        * [rates description]
