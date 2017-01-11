@@ -10,7 +10,7 @@ export default class Bank {
    * Request then pass html to scraper function for scraping
    * @param {function} scraper
    */
-  scrape(scraper, finish) {
+  scrape(finish) {
     request(this.url, (error, response, html) => {
       /**
        * [rates description]
@@ -29,7 +29,7 @@ export default class Bank {
        */
       let rates = null;
       if (!error && response.statusCode === 200) {
-        rates = scraper(html);
+        rates = this.scraper(html);
       }
 
       finish(rates);
