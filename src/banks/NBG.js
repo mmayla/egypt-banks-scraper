@@ -11,6 +11,10 @@ export default class NBG extends Bank {
     super(NBG_NAME, url);
   }
 
+  /**
+   * Scrape rates from html
+   * @param {Object} html html of bank web page to scrape
+   */
   scraper(html) {
     const $ = cheerio.load(html);
     const table = $('#exchange').eq(1);

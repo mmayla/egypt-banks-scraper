@@ -8,7 +8,7 @@ export default class Bank {
 
   /**
    * Request then pass html to scraper function for scraping
-   * @param {function} scraper
+   * @param {function} finish callback to pass rates to when finish scraping
    */
   scrape(finish) {
     request(this.url, (error, response, html) => {
