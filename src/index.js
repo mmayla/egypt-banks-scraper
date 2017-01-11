@@ -2,4 +2,6 @@ import NBG from './banks/NBG';
 
 const myBank = new NBG();
 
-console.log(myBank.name);
+myBank.scrape((rates) => {
+  console.log(rates);
+});

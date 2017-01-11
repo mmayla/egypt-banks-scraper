@@ -1,4 +1,5 @@
-// const cheerio = require('cheerio');
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["scraper"] }] */
+
 import cheerio from 'cheerio';
 
 import Bank from './Bank';
@@ -10,7 +11,7 @@ export default class NBG extends Bank {
     super(NBG_NAME, url);
   }
 
-  static scraper(html) {
+  scraper(html) {
     const $ = cheerio.load(html);
     const table = $('#exchange').eq(1);
     const rows = table.find($('tr'));
