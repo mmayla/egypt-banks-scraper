@@ -16,14 +16,14 @@ describe('Banks', () => {
   banks.forEach((Bank) => {
     const bank = new Bank();
     describe(bank.name.acronym, () => {
-      it('Should not equal null', () => {
-        const testPromise = new Promise((resolve) => {
-          bank.scrape((rates) => {
-            resolve(rates);
-          });
+      const bankTestPromise = new Promise((resolve) => {
+        bank.scrape((rates) => {
+          resolve(rates);
         });
+      });
 
-        return testPromise.then((result) => {
+      it('Should not equal null', () => {
+        return bankTestPromise.then((result) => {
           expect(result).to.not.equal(null);
         });
       });
