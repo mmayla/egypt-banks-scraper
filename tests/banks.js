@@ -22,11 +22,9 @@ describe('Banks', () => {
         });
       });
 
-      it('Should not equal null', () => {
-        return bankTestPromise.then((result) => {
-          expect(result).to.not.equal(null);
-        });
-      });
+      it('Should not equal null', () => bankTestPromise.then((result) => {
+        expect(result).to.not.equal(null);
+      }));
     });
   });
 });
