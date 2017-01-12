@@ -3,12 +3,13 @@
 import cheerio from 'cheerio';
 
 import Bank from './Bank';
-import { CREDITAGRICOLE_NAME } from './banks_names';
+
+const banksNames = require('./banks_names.json');
 
 export default class CreditAgricole extends Bank {
   constructor() {
     const url = 'https://www.ca-egypt.com/en/personal-banking/';
-    super(CREDITAGRICOLE_NAME, url);
+    super(banksNames.CA, url);
   }
 
   /**

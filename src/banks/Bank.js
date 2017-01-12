@@ -1,6 +1,11 @@
 const request = require('request');
 
 export default class Bank {
+  /**
+   * @param {Object} bankName names of the bank acronym, english,
+   * arabic, etc
+   * @param {String} url of the bank exchange rates web page
+   */
   constructor(bankName, bankURL) {
     this.name = bankName;
     this.url = bankURL;

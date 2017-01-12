@@ -3,12 +3,13 @@
 import cheerio from 'cheerio';
 
 import Bank from './Bank';
-import { NBG_NAME } from './banks_names';
+
+const banksNames = require('./banks_names.json');
 
 export default class NBG extends Bank {
   constructor() {
     const url = 'http://www.nbg.com.eg/en/exchange-rates';
-    super(NBG_NAME, url);
+    super(banksNames.NBG, url);
   }
 
   /**
