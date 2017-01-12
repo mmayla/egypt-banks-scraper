@@ -17,13 +17,15 @@ describe('Banks', () => {
     const bank = new Bank();
     describe(bank.name.acronym, () => {
       it('Should not equal null', () => {
-        const result = new Promise((resolve) => {
+        const testPromise = new Promise((resolve) => {
           bank.scrape((rates) => {
             resolve(rates);
           });
         });
 
-        expect(result).to.not.equal(null);
+        return testPromise.then((result) => {
+          expect(result).to.not.equal(null);
+        });
       });
     });
   });
