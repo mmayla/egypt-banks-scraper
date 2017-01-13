@@ -23,7 +23,7 @@ describe('Banks', () => {
       });
 
       describe('Rates', () => {
-        it('Rates should not equal null', () => bankTestPromise.then((rates) => {
+        it('rates should not equal null', () => bankTestPromise.then((rates) => {
           expect(rates).to.not.equal(null);
         }));
 
@@ -38,6 +38,12 @@ describe('Banks', () => {
         it('buy property in rates should be a number', () => bankTestPromise.then((rates) => {
           rates.forEach((currencyRate) => {
             expect(currencyRate.buy).to.be.a('number');
+          });
+        }));
+
+        it('sell property in rates should be a number', () => bankTestPromise.then((rates) => {
+          rates.forEach((currencyRate) => {
+            expect(currencyRate.sell).to.be.a('number');
           });
         }));
       });
