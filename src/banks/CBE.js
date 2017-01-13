@@ -55,8 +55,8 @@ export default class CBE extends Bank {
 
       rates.push({
         code: CBE.getCurrencyCode(currencyName),
-        buy: currencyBuy,
-        sell: currencySell,
+        buy: Number(currencyBuy),
+        sell: Number(currencySell),
       });
     });
     return rates;

@@ -25,14 +25,26 @@ export default class NBG extends Bank {
     rows.each((index, row) => {
       if (index === 0) return;
 
-      const currencyCode = $(row).children().eq(1).text();
-      const buyRate = $(row).children().eq(2).text();
-      const sellRate = $(row).children().eq(3).text();
+      const currencyCode = $(row)
+                              .children()
+                                .eq(1)
+                                .text()
+                                .trim();
+      const buyRate = $(row)
+                        .children()
+                          .eq(2)
+                          .text()
+                          .trim();
+      const sellRate = $(row)
+                        .children()
+                          .eq(3)
+                          .text()
+                          .trim();
 
       rates.push({
         code: currencyCode,
-        buy: buyRate,
-        sell: sellRate,
+        buy: Number(buyRate),
+        sell: Number(sellRate),
       });
     });
     return rates;

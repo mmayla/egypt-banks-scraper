@@ -22,22 +22,25 @@ describe('Banks', () => {
         });
       });
 
-      it('Should not equal null', () => bankTestPromise.then((rates) => {
-        expect(rates).to.not.equal(null);
-      }));
+      describe('Rates', () => {
+        it('Rates should not equal null', () => bankTestPromise.then((rates) => {
+          expect(rates).to.not.equal(null);
+        }));
 
-      it('code property in rates should be string of 3 letters', () => bankTestPromise.then((rates) => {
-        rates.forEach((currencyRate) => {
-          expect(currencyRate.code).to.be.a('string');
-          expect(currencyRate).to.have.property('code').with.lengthOf(3);
-        });
-      }));
+        it('code property in rates should be a string of 3 letters', () => bankTestPromise.then((rates) => {
+          rates.forEach((currencyRate) => {
+            expect(currencyRate.code).to.be.a('string');
+            expect(currencyRate).to.have.property('code').with.lengthOf(3);
+            // TODO check that code from currency iso list
+          });
+        }));
 
-      it('buy property in rates should be a number', () => bankTestPromise.then((rates) => {
-        rates.forEach((currencyRate) => {
-          expect(currencyRate.buy).to.be.a('number');
-        });
-      }));
+        it('buy property in rates should be a number', () => bankTestPromise.then((rates) => {
+          rates.forEach((currencyRate) => {
+            expect(currencyRate.buy).to.be.a('number');
+          });
+        }));
+      });
     });
   });
 });
