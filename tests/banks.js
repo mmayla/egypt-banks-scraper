@@ -3,6 +3,7 @@ import { expect } from 'chai';
 import NBG from '../src/banks/NBG';
 import CreditAgricole from '../src/banks/CreditAgricole';
 import CBE from '../src/banks/CBE';
+import NBE from '../src/banks/NBE';
 
 const { describe, it } = global;
 
@@ -10,6 +11,7 @@ const banks = [
   NBG,
   CreditAgricole,
   CBE,
+  NBE,
 ];
 
 describe('Banks', () => {
