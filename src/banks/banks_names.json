@@ -13,5 +13,10 @@
     "acronym": "CBE",
     "en": "Central Bank of Egypt",
     "ar": "البنك المركزي المصري"
+  },
+  "NBE": {
+    "acronym": "NBE",
+    "en": "National Bank of Egypt",
+    "ar": "البنك الأهلي المصري"
   }
 }
