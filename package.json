@@ -9,10 +9,10 @@
     "banks",
     "exchange rates"
   ],
-  "author": "mmayla <mohamed.mayla@gmail.com>",
+  "author": "MMayla <mohamed.mayla@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mmayla/egypt-banks-scraper.git"
+    "url": "https://github.com/MMayla/egypt-banks-scraper.git"
   },
   "main": "index.js",
   "scripts": {
