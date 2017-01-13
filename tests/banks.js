@@ -35,15 +35,17 @@ describe('Banks', () => {
           });
         }));
 
-        it('buy property in rates should be a number', () => bankTestPromise.then((rates) => {
+        it('buy property in rates should be a positive number', () => bankTestPromise.then((rates) => {
           rates.forEach((currencyRate) => {
             expect(currencyRate.buy).to.be.a('number');
+            expect(currencyRate.buy).to.be.above(0);
           });
         }));
 
-        it('sell property in rates should be a number', () => bankTestPromise.then((rates) => {
+        it('sell property in rates should be a positive number', () => bankTestPromise.then((rates) => {
           rates.forEach((currencyRate) => {
             expect(currencyRate.sell).to.be.a('number');
+            expect(currencyRate.buy).to.be.above(0);
           });
         }));
       });
