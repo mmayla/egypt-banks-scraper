@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { sum } from '../src/index';
+// import { sum } from '../src/index';
 
 const { describe, it } = global;
 
