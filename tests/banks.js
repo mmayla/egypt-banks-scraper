@@ -22,8 +22,21 @@ describe('Banks', () => {
         });
       });
 
-      it('Should not equal null', () => bankTestPromise.then((result) => {
-        expect(result).to.not.equal(null);
+      it('Should not equal null', () => bankTestPromise.then((rates) => {
+        expect(rates).to.not.equal(null);
+      }));
+
+      it('code property in rates should be string of 3 letters', () => bankTestPromise.then((rates) => {
+        rates.forEach((currencyRate) => {
+          expect(currencyRate.code).to.be.a('string');
+          expect(currencyRate).to.have.property('code').with.lengthOf(3);
+        });
+      }));
+
+      it('buy property in rates should be a number', () => bankTestPromise.then((rates) => {
+        rates.forEach((currencyRate) => {
+          expect(currencyRate.buy).to.be.a('number');
+        });
       }));
     });
   });
