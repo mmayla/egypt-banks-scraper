@@ -34,7 +34,7 @@ export default class CIB extends Bank {
 
   /**
    * Scrape rates from html
-   * @param {Object} html html of bank web page to scrape
+   * @param {Object} currencyList list from the bank's raw json
    */
   scraper(currencyList) {
     const rates = [];
