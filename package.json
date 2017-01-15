@@ -20,7 +20,7 @@
     "build": "babel src -d dist",
     "lint": "eslint src tests",
     "lint:fix": "npm run lint -- --fix",
-    "test": "mocha tests --compilers js:babel-register",
+    "test": "mocha tests --timeout 15000 --compilers js:babel-register",
     "test:dev": "npm run test -- --watch",
     "prepublish": "npm run clean & npm run build",
     "start": "babel-node src/index.js"

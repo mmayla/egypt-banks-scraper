@@ -23,5 +23,10 @@
     "acronym": "CIB",
     "en": "Commercial International Bank",
     "ar": "البنك التجاري الدولي"
+  },
+  "AAIB": {
+    "acronym": "AAIB",
+    "en": "Arab African International bank",
+    "ar": "البنك العربي الأفريقي الدولي"
   }
 }
