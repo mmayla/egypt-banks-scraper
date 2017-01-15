@@ -18,5 +18,10 @@
     "acronym": "NBE",
     "en": "National Bank of Egypt",
     "ar": "البنك الأهلي المصري"
+  },
+  "CIB": {
+    "acronym": "CIB",
+    "en": "Commercial International Bank",
+    "ar": "البنك التجاري الدولي"
   }
 }
