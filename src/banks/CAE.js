@@ -6,7 +6,7 @@ import Bank from './Bank';
 
 const banksNames = require('./banks_names.json');
 
-export default class CreditAgricole extends Bank {
+export default class CAE extends Bank {
   constructor() {
     const url = 'https://www.ca-egypt.com/en/personal-banking/';
     super(banksNames.CAE, url);
