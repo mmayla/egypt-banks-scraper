@@ -15,7 +15,7 @@ export default class BDC extends Bank {
   static getCurrencyCode(name) {
     const dict = {
       'US DOLLAR': 'USD',
-      'EURO': 'EUR',
+      EURO: 'EUR',
       'SWISS FRANC': 'CHF',
       'SWEDISH KRONA': 'SEK',
       'SAUDI ARABIAN RIYAL': 'SAR',
