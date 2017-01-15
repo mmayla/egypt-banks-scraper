@@ -28,5 +28,10 @@
     "acronym": "AAIB",
     "en": "Arab African International bank",
     "ar": "البنك العربي الأفريقي الدولي"
+  },
+  "BDC": {
+    "acronym": "BDC",
+    "en": "Banque Du Caire",
+    "ar": "بنك القاهرة"
   }
 }

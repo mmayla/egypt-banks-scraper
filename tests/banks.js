@@ -6,6 +6,7 @@ import CBE from '../src/banks/CBE';
 import NBE from '../src/banks/NBE';
 import CIB from '../src/banks/CIB';
 import AAIB from '../src/banks/AAIB';
+import BDC from '../src/banks/BDC';
 
 const { describe, it } = global;
 
@@ -16,6 +17,7 @@ const banks = [
   NBE,
   CIB,
   AAIB,
+  BDC,
 ];
 
 describe('Banks', () => {
