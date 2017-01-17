@@ -33,5 +33,10 @@
     "acronym": "BDC",
     "en": "Banque Du Caire",
     "ar": "بنك القاهرة"
+  },
+  "BM": {
+    "acronym": "BM",
+    "en": "Banque Misr",
+    "ar": "بنك مصر"
   }
 }
