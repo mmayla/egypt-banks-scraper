@@ -43,5 +43,10 @@
     "acronym": "SCB",
     "en": "Suez Canal Bank",
     "ar": "بنك قناة السويس"
+  },
+  "ABB": {
+    "acronym": "ABB",
+    "en": "AlBaraka Bank",
+    "ar": "بنك البركة"
   }
 }
