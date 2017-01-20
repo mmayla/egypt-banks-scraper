@@ -63,5 +63,10 @@
     "acronym": "MIDB",
     "en": "Misr Iran Development Bank",
     "ar": "بنك مصر ايران للتنمية"
+  },
+  "UBE": {
+    "acronym": "UBE",
+    "en": "The United Bank of Egypt",
+    "ar": "المصرف المتحد المصري"
   }
 }
