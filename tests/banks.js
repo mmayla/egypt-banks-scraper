@@ -8,6 +8,7 @@ import CIB from '../src/banks/CIB';
 import AAIB from '../src/banks/AAIB';
 import BDC from '../src/banks/BDC';
 import BM from '../src/banks/BM';
+import SCB from '../src/banks/SCB';
 
 const { describe, it } = global;
 
@@ -20,6 +21,7 @@ const banks = [
   AAIB,
   BDC,
   BM,
+  SCB,
 ];
 
 describe('Banks', () => {
@@ -48,14 +50,14 @@ describe('Banks', () => {
         it('buy property in rates should be a positive number', () => bankTestPromise.then((rates) => {
           rates.forEach((currencyRate) => {
             expect(currencyRate.buy).to.be.a('number');
-            expect(currencyRate.buy).to.be.above(0);
+            expect(currencyRate.buy).to.be.at.least(0);
           });
         }));
 
         it('sell property in rates should be a positive number', () => bankTestPromise.then((rates) => {
           rates.forEach((currencyRate) => {
             expect(currencyRate.sell).to.be.a('number');
-            expect(currencyRate.buy).to.be.above(0);
+            expect(currencyRate.buy).to.be.at.least(0);
           });
         }));
       });

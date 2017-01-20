@@ -38,5 +38,10 @@
     "acronym": "BM",
     "en": "Banque Misr",
     "ar": "بنك مصر"
+  },
+  "SCB": {
+    "acronym": "SCB",
+    "en": "Suez Canal Bank",
+    "ar": "بنك قناة السويس"
   }
 }
