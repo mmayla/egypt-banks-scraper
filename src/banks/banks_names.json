@@ -68,5 +68,10 @@
     "acronym": "UBE",
     "en": "The United Bank of Egypt",
     "ar": "المصرف المتحد المصري"
+  },
+  "EDBE": {
+    "acronym": "EDBE",
+    "en": "Export Development Bank of Egypt",
+    "ar": "البنك المصري لتنمية الصادرات"
   }
 }
