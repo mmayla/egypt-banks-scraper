@@ -1,3 +1,6 @@
+# *** Under development ***
+# *** Readme not complete yet
+
 Scrape exchange rates from Egypt's banks
 
 ## Installation
