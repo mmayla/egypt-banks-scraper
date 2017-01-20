@@ -11,6 +11,7 @@ import BM from '../src/banks/BM';
 import SCB from '../src/banks/SCB';
 import ABB from '../src/banks/ABB';
 import ABK from '../src/banks/ABK';
+import SAIB from '../src/banks/SAIB';
 
 const { describe, it } = global;
 
@@ -26,6 +27,7 @@ const banks = [
   SCB,
   ABB,
   ABK,
+  SAIB,
 ];
 
 describe('Banks', () => {
