@@ -51,12 +51,17 @@
   },
   "ABK": {
     "acronym": "ABK",
-    "en": "Al Ahli bank of kuwait - Egypt",
-    "ar": "البنك الأهلي الكويتي - مصر"
+    "en": "Al Ahli bank of kuwait",
+    "ar": "البنك الأهلي الكويتي"
   },
   "SAIB": {
     "acronym": "SAIB",
     "en": "Société Arabe Internationale de Banque",
     "ar": "بنك الشركة المصرفية العربية الدولية"
+  },
+  "MIDB": {
+    "acronym": "MIDB",
+    "en": "Misr Iran Development Bank",
+    "ar": "بنك مصر ايران للتنمية"
   }
 }

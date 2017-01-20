@@ -12,6 +12,7 @@ import SCB from '../src/banks/SCB';
 import ABB from '../src/banks/ABB';
 import ABK from '../src/banks/ABK';
 import SAIB from '../src/banks/SAIB';
+import MIDB from '../src/banks/MIDB';
 
 const { describe, it } = global;
 
@@ -28,6 +29,7 @@ const banks = [
   ABB,
   ABK,
   SAIB,
+  MIDB,
 ];
 
 describe('Banks', () => {
@@ -43,6 +45,10 @@ describe('Banks', () => {
       describe('Rates', () => {
         it('rates should not equal null', () => bankTestPromise.then((rates) => {
           expect(rates).to.not.equal(null);
+        }));
+
+        it('rates should not be empty', () => bankTestPromise.then((rates) => {
+          expect(rates.length).to.not.equal(0);
         }));
 
         it('code property in rates should be a string of 3 letters', () => bankTestPromise.then((rates) => {
