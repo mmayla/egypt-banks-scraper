@@ -41,9 +41,21 @@ export default class ABB extends Bank {
     const rates = [];
     table.each((index, row) => {
       if (index < 1) return;
-      const currencyName = $(row).children().eq(0).text().trim();
-      const buyRate = $(row).children().eq(1).text().trim();
-      const sellRate = $(row).children().eq(2).text().trim();
+      const currencyName = $(row)
+                            .children()
+                              .eq(0)
+                              .text()
+                              .trim();
+      const buyRate = $(row)
+                        .children()
+                          .eq(1)
+                          .text()
+                          .trim();
+      const sellRate = $(row)
+                        .children()
+                          .eq(2)
+                          .text()
+                          .trim();
 
       rates.push({
         code: ABB.getCurrencyCode(currencyName),
