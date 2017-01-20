@@ -40,8 +40,8 @@ export default class SAIB extends Bank {
 
       rates.push({
         code: currencyCode,
-        buy: Number(buyRate),
-        sell: Number(sellRate),
+        buy: +(Number(buyRate) / 100).toFixed(4),
+        sell: +(Number(sellRate) / 100).toFixed(4),
       });
     });
     return rates;
