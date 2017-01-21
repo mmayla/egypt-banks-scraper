@@ -19,7 +19,6 @@ export default class EDBE extends Bank {
   scraper(xml) {
     const $ = cheerio.load(xml, { xmlMode: true });
     const ratesTag = $('rates');
-    console.log(ratesTag.attr('USDBbuy'));
 
     const rates = [];
     // USD
