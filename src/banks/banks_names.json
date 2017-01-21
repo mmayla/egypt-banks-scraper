@@ -73,5 +73,10 @@
     "acronym": "EDBE",
     "en": "Export Development Bank of Egypt",
     "ar": "البنك المصري لتنمية الصادرات"
+  },
+  "AB": {
+    "acronym": "AB",
+    "en": "Alex Bank",
+    "ar": "بنك الإسكندرية"
   }
 }
