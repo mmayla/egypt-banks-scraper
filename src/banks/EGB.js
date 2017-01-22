@@ -12,29 +12,6 @@ export default class EGB extends Bank {
     super(banksNames.EGB, url);
   }
 
-  static getCurrencyCode(name) {
-    const dict = {
-      'EURO CURRENCY': 'EUR',
-      'US DOLLAR': 'USD',
-      'POUND STERLING': 'GBP',
-      'JAPANESE YEN': 'JPY',
-      'SWISS FRANC': 'CHF',
-      'AUSTRALIAN DOLLAR': 'AUD',
-      'CANADIAN DOLLAR': 'CAD',
-      'DANISH KRONE': 'DKK',
-      'SWEDISH KRONA': 'SEK',
-      'NORWEGIAN KRONE': 'NOK',
-      'SAUDI RIYAL': 'SAR',
-      'U.A.E DIRHAM': 'AED',
-      'QATAR RIAL': 'QAR',
-      'KUWAITI DINAR': 'KWD',
-      'JORDANIAN DINAR': 'JOD',
-      'BAHRAIN DINAR': 'BHD',
-      'OMANI RIAL': 'OMR',
-    };
-    return (dict[name]);
-  }
-
   /**
    * Scrape rates from html
    * @param {Object} html html of bank web page to scrape
