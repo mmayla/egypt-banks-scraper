@@ -78,5 +78,10 @@
     "acronym": "AB",
     "en": "Alex Bank",
     "ar": "بنك الإسكندرية"
-  }
+  },
+  "EGB": {
+    "acronym": "EGB",
+    "en": "Egyptian Gulf Bank",
+    "ar": "البنك المصرى الخليجى"
+    }
 }
