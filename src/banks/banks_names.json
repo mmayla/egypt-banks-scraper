@@ -78,5 +78,25 @@
     "acronym": "AB",
     "en": "Alex Bank",
     "ar": "بنك الإسكندرية"
+  },
+  "EGB": {
+    "acronym": "EGB",
+    "en": "Egyptian Gulf Bank",
+    "ar": "البنك المصرى الخليجى"
+  },
+  "ADIB": {
+    "acronym": "ADIB",
+    "en": "Abu Dhabi Islamic Bank",
+    "ar": "مصرف أبوظبي الإسلامي"
+  },
+  "FIBE": {
+    "acronym": "FIBE",
+    "en": "Faisal Islamic Bank Of Egypt",
+    "ar": "بنك فيصل الإسلامي المصري"
+  },
+  "BBE": {
+    "acronym": "BBE",
+    "en": "Blom Bank Egypt",
+    "ar": "بنك بلوم مصر"
   }
 }
