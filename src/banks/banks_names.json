@@ -93,5 +93,10 @@
     "acronym": "FIBE",
     "en": "Faisal Islamic Bank Of Egypt",
     "ar": "بنك فيصل الإسلامي المصري"
+  },
+  "BBE": {
+    "acronym": "BBE",
+    "en": "Blom Bank Egypt",
+    "ar": "بنك بلوم مصر"
   }
 }
