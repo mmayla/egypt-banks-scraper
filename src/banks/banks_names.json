@@ -83,5 +83,10 @@
     "acronym": "EGB",
     "en": "Egyptian Gulf Bank",
     "ar": "البنك المصرى الخليجى"
+  },
+  "ADIB": {
+    "acronym": "ADIB",
+    "en": "Abu Dhabi Islamic Bank",
+    "ar": "مصرف أبوظبي الإسلامي"
     }
 }

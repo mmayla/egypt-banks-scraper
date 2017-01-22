@@ -17,6 +17,7 @@ import UBE from '../src/banks/UBE';
 import EDBE from '../src/banks/EDBE';
 import AB from '../src/banks/AB';
 import EGB from '../src/banks/EGB';
+import ADIB from '../src/banks/ADIB';
 
 const { describe, it } = global;
 
@@ -38,6 +39,7 @@ const banks = [
   EDBE,
   AB,
   EGB,
+  ADIB,
 ];
 
 describe('Banks', () => {
