@@ -24,18 +24,19 @@ export default class FIBE extends Bank {
       if ((index === 0) || (index === 1)) return;
       const currencyName = $(row)
                             .children()
-                            .eq(1)
-                            .text()
-                            .trim();
+                              .eq(1)
+                              .text()
+                              .trim();
       const buyRate = $(row)
                         .children()
-                        .eq(2)
-                        .text();
+                          .eq(2)
+                          .text()
+                          .trim();
       const sellRate = $(row)
                         .children()
-                        .eq(3)
-                        .text()
-                        .trim();
+                          .eq(3)
+                          .text()
+                          .trim();
       rates.push({
         code: currencyName,
         buy: Number(buyRate),

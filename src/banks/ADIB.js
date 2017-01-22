@@ -46,17 +46,19 @@ export default class ADIB extends Bank {
       if (index === 0) return;
       const currencyName = $(row)
                             .children()
-                            .eq(0)
-                            .text()
-                            .trim();
+                              .eq(0)
+                              .text()
+                              .trim();
       const buyRate = $(row)
                         .children()
-                        .eq(1)
-                        .text();
+                          .eq(1)
+                          .text()
+                          .trim();
       const sellRate = $(row)
                         .children()
-                        .eq(2)
-                        .text();
+                          .eq(2)
+                          .text()
+                          .trim();
       rates.push({
         code: ADIB.getCurrencyCode(currencyName),
         buy: Number(buyRate),
