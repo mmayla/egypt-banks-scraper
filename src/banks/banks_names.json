@@ -88,5 +88,10 @@
     "acronym": "ADIB",
     "en": "Abu Dhabi Islamic Bank",
     "ar": "مصرف أبوظبي الإسلامي"
-    }
+  },
+  "FIBE": {
+    "acronym": "FIBE",
+    "en": "Faisal Islamic Bank Of Egypt",
+    "ar": "بنك فيصل الإسلامي المصري"
+  }
 }
