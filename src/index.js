@@ -1,6 +1,6 @@
-import ADIB from './banks/ADIB';
+import NBG from './banks/NBG';
 
-const myBank = new ADIB();
+const myBank = new NBG();
 
 myBank.scrape((rates) => {
   console.log(rates);
