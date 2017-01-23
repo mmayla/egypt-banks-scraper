@@ -44,6 +44,14 @@ const banksObjects = [
   new BBE(),
 ];
 
+function getAllBanksNames() {
+  const names = [];
+  banksObjects.forEach((bank) => {
+    names.push(bank.name.acronym);
+  });
+  return names;
+}
+
 function getBankWithName(bankName) {
   for (let i = 0; i < banksObjects.length; i += 1) {
     if (banksObjects[i].name.acronym === bankName) {
@@ -73,12 +81,16 @@ function filterCurrencies(rates, currenciesCodes) {
 }
 
 function getExchangeRates(banks, currencies, cb) {
+  // If banks array empty get all banks names
+  const filteredBanks = banks.length === 0 ? getAllBanksNames() : banks;
+
   const result = {};
-  banks.forEach((bankName, index) => {
+  filteredBanks.forEach((bankName, index) => {
     const bank = getBankWithName(bankName);
     if (bank === null) throw new Error('No bank with the name', bankName);
 
     bank.scrape((rates) => {
+      // If currencies array empty get all rates
       const filteredRates = currencies.length === 0 ?
                             rates : filterCurrencies(rates, currencies);
       result[bank.name.acronym] = {
@@ -91,6 +103,11 @@ function getExchangeRates(banks, currencies, cb) {
   });
 }
 
-getExchangeRates(['NBG', 'CIB'], ['USD', 'EUR', 'JPY'], (rates) => {
-  console.log(util.inspect(rates, false, null));
+// getExchangeRates(['NBG', 'CIB'], ['USD', 'EUR', 'JPY'], (rates) => {
+//   console.log(util.inspect(rates, false, null));
+// });
+
+getExchangeRates([], [], (result) => {
+  console.log(Object.keys(result).length);
+  console.log(result);
 });
