@@ -19,6 +19,8 @@ import ADIB from './banks/ADIB';
 import FIBE from './banks/FIBE';
 import BBE from './banks/BBE';
 
+const util = require('util');
+
 const banksObjects = [
   new NBG(),
   new CAE(),
@@ -83,11 +85,11 @@ function getExchangeRates(banks, currencies, cb) {
         rates: filteredRates,
       };
 
-      if (index === banks.length - 1) cb(result);
+      if (index === 0) cb(result);
     });
   });
 }
 
-getExchangeRates(['NBG'], ['USD'], (rates) => {
-  console.log(rates);
+getExchangeRates(['NBG', 'CIB'], ['USD', 'EUR', 'JPY'], (rates) => {
+  console.log(util.inspect(rates, false, null));
 });
