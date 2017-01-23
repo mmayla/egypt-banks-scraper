@@ -79,7 +79,8 @@ function getExchangeRates(banks, currencies, cb) {
     if (bank === null) throw new Error('No bank with the name', bankName);
 
     bank.scrape((rates) => {
-      const filteredRates = filterCurrencies(rates, currencies);
+      const filteredRates = currencies.length === 0 ?
+                            rates : filterCurrencies(rates, currencies);
       result[bank.name.acronym] = {
         name: bank.name,
         rates: filteredRates,
