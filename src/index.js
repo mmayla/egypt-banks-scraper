@@ -19,8 +19,6 @@ import ADIB from './banks/ADIB';
 import FIBE from './banks/FIBE';
 import BBE from './banks/BBE';
 
-const util = require('util');
-
 const banksObjects = [
   new NBG(),
   new CAE(),
@@ -85,29 +83,33 @@ function getExchangeRates(banks, currencies, cb) {
   const filteredBanks = banks.length === 0 ? getAllBanksNames() : banks;
 
   const result = {};
-  filteredBanks.forEach((bankName, index) => {
+
+  const banksPromises = [];
+  filteredBanks.forEach((bankName) => {
     const bank = getBankWithName(bankName);
     if (bank === null) throw new Error('No bank with the name', bankName);
 
-    bank.scrape((rates) => {
-      // If currencies array empty get all rates
-      const filteredRates = currencies.length === 0 ?
-                            rates : filterCurrencies(rates, currencies);
-      result[bank.name.acronym] = {
-        name: bank.name,
-        rates: filteredRates,
-      };
-
-      if (index === 0) cb(result);
+    const bankPromise = new Promise((resolve) => {
+      bank.scrape((rates) => {
+        // If currencies array empty get all rates
+        const filteredRates = currencies.length === 0 ?
+                              rates : filterCurrencies(rates, currencies);
+        resolve({
+          name: bank.name,
+          rates: filteredRates,
+        });
+      });
     });
+    banksPromises.push(bankPromise);
+  });
+  Promise.all(banksPromises).then((values) => {
+    values.forEach((value) => {
+      result[value.name.acronym] = value;
+    });
+    cb(result);
   });
 }
 
-// getExchangeRates(['NBG', 'CIB'], ['USD', 'EUR', 'JPY'], (rates) => {
-//   console.log(util.inspect(rates, false, null));
-// });
-
-getExchangeRates([], [], (result) => {
-  console.log(Object.keys(result).length);
-  console.log(result);
-});
+module.exports = {
+  getExchangeRates,
+};
