@@ -22,23 +22,30 @@ export default class EGB extends Bank {
     const rates = [];
     tableRows.each((index, row) => {
       if ((index === 0) || (index % 2) !== 0) return;
-      const currencyName = $(row)
+      const currencyCode = $(row)
                             .children()
                               .eq(0)
                               .text()
                               .trim();
-      const buyRate = $(row)
+      let buyRate = $(row)
                         .children()
                           .eq(1)
                           .text()
                           .trim();
-      const sellRate = $(row)
+      let sellRate = $(row)
                         .children()
                           .eq(2)
                           .text()
                           .trim();
+
+      // Fix JPY rate to be for 100 notes
+      if (currencyCode === 'JPY') {
+        buyRate *= 100;
+        sellRate *= 100;
+      }
+
       rates.push({
-        code: currencyName,
+        code: currencyCode,
         buy: Number(buyRate),
         sell: Number(sellRate),
       });

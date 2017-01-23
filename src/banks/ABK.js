@@ -27,16 +27,22 @@ export default class ABK extends Bank {
                               .eq(0)
                               .text()
                               .trim();
-      const buyRate = $(row)
+      let buyRate = $(row)
                         .children()
                           .eq(1)
                           .text()
                           .trim();
-      const sellRate = $(row)
+      let sellRate = $(row)
                         .children()
                           .eq(2)
                           .text()
                           .trim();
+
+      // Fix JPY rate to be for 100 notes
+      if (currencyCode === 'JPY') {
+        buyRate *= 100;
+        sellRate *= 100;
+      }
 
       rates.push({
         code: currencyCode,

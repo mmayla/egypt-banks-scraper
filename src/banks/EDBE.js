@@ -48,8 +48,9 @@ export default class EDBE extends Bank {
     // JPY
     rates.push({
       code: 'JPY',
-      buy: Number(ratesTag.attr('JPYBbuy')),
-      sell: Number(ratesTag.attr('JPYBsell')),
+      // Fix JPY rate to be for 100 notes
+      buy: Number(ratesTag.attr('JPYBbuy')) * 100,
+      sell: Number(ratesTag.attr('JPYBsell')) * 100,
     });
     return rates;
   }
