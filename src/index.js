@@ -42,12 +42,52 @@ const banksObjects = [
   new BBE(),
 ];
 
-function getExchangeRates(banks, currencies) {
-  banksObjects.forEach((bank) => {
+function getBankWithName(bankName) {
+  for (let i = 0; i < banksObjects.length; i += 1) {
+    if (banksObjects[i].name.acronym === bankName) {
+      return banksObjects[i];
+    }
+  }
+  return null;
+}
+
+function getCurrencyRates(rates, currencyCode) {
+  for (let i = 0; i < rates.length; i += 1) {
+    const filteredRate = rates[i].code === currencyCode ? rates[i] : undefined;
+    if (filteredRate !== undefined) return filteredRate;
+  }
+  return null;
+}
+
+function filterCurrencies(rates, currenciesCodes) {
+  const filteredRates = [];
+  currenciesCodes.forEach((code) => {
+    const rate = getCurrencyRates(rates, code);
+    if (rate === null) return;
+
+    filteredRates.push(rate);
+  });
+  return filteredRates;
+}
+
+function getExchangeRates(banks, currencies, cb) {
+  const result = {};
+  banks.forEach((bankName, index) => {
+    const bank = getBankWithName(bankName);
+    if (bank === null) throw new Error('No bank with the name', bankName);
+
     bank.scrape((rates) => {
-      console.log(bank.name.acronym,':', rates);
+      const filteredRates = filterCurrencies(rates, currencies);
+      result[bank.name.acronym] = {
+        name: bank.name,
+        rates: filteredRates,
+      };
+
+      if (index === banks.length - 1) cb(result);
     });
   });
 }
 
-getExchangeRates();
+getExchangeRates(['NBG'], ['USD'], (rates) => {
+  console.log(rates);
+});
