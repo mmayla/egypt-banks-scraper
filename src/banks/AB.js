@@ -4,7 +4,7 @@ import cheerio from 'cheerio';
 
 import Bank from './Bank';
 
-const banksNames = require('./banks_names.json');
+import { banksNames } from './banks_names';
 
 export default class AB extends Bank {
   constructor() {

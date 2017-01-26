@@ -4,7 +4,7 @@ import request from 'request';
 
 import Bank from './Bank';
 
-const banksNames = require('./banks_names.json');
+import { banksNames } from './banks_names';
 
 export default class CIB extends Bank {
   constructor() {
