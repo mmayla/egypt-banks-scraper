@@ -1,16 +1,12 @@
 import { expect } from 'chai';
-// import { sum } from '../src/index';
+import { getExchangeRates } from '../src/index';
+
+import NBG from '../src/banks/NBG';
+import CIB from '../src/banks/CIB';
+import NBE from '../src/banks/NBE';
+import BBE from '../src/banks/BBE';
 
 const { describe, it } = global;
 
-describe('sum', () => {
-  // it('should add two numbers correctly', () => {
-  //   const result = sum(10, 20);
-  //   expect(result).to.be.equal(30);
-  // });
-  //
-  // it('should return the same number if second param is null', () => {
-  //   const result = sum(10, null);
-  //   expect(result).to.be.equal(10);
-  // });
+describe('getExchangeRates', () => {
 });
