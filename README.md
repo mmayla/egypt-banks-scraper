@@ -45,6 +45,27 @@ getExchangeRates(['NBG', 'CIB'], ['USD', 'EUR'], (err, data) => {
   // data
 });
 ```
+## Supported banks
+- National Bank of Greece
+- Credit Agricole
+- Central Bank of Egypt
+- National Bank of Egypt
+- Commercial International Bank
+- Arab African International bank
+- Banque Du Caire
+- Banque Misr
+- Suez Canal Bank
+- AlBaraka Bank
+- Al Ahli bank of kuwait
+- Société Arabe Internationale de Banque
+- Misr Iran Development Bank
+- The United Bank of Egypt
+- Export Development Bank of Egypt
+- Alex Bank
+- Egyptian Gulf Bank
+- Abu Dhabi Islamic Bank
+- Faisal Islamic Bank Of Egypt
+- Blom Bank Egypt
 
 ## Development
 
