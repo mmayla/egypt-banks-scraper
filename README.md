@@ -1,11 +1,53 @@
-# *** Under development ***
-# *** Readme not complete yet
-
 Scrape exchange rates from Egypt's banks
 
 ## Installation
+```
+npm install --save egypt-banks-scraper
+```
 
 ## Getting Started
+
+### Require the package
+```
+let { getExchangeRates } = require('egypt-banks-scraper');
+```
+
+`getExchangeRates` takes 3 arguments:
+  - banks array: list of banks names to get its exchange rates
+  - currencies array: list of currencies iso code to get from the banks
+  - callback function: called when finished
+
+### To get all banks with all currencies
+```
+getExchangeRates([], [], (result) => {
+  // result
+});
+```
+
+### To get All banks with certain currencies
+```
+// Get only USD and EUR exchange rates from all banks
+getExchangeRates([], ['USD', 'EUR'], (result) => {
+  // result
+});
+```
+
+### To get All exchange rates in certain banks
+```
+getExchangeRates(['NBG', 'CIB'], [], (result) => {
+  // result
+});
+```
+
+### To get the exchange rates for some currencies and some banks
+```
+getExchangeRates(['NBG', 'CIB'], ['USD', 'EUR'], (result) => {
+  // result
+});
+```
+
+### Notes
+If
 
 ## Development
 
@@ -23,10 +65,6 @@ Run them by typing this in your terminal: `npm run [script]`
 | `start`    | Run src/index.js using babel-node
 
 **NOTE:** There is another script `prepublish` that runs before you publish the package to NPM. All it does is to run `clean` and `build`.
-
-## Change Log
-
-**1.0.0** (2017-01-13) **—** initial release
 
 ## Contributing
 
