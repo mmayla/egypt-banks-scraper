@@ -1,6 +1,6 @@
 {
   "name": "egypt-banks-scraper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "description": "Scrape exchange rates from Egypt banks",
   "keywords": [
