@@ -15,39 +15,36 @@ let { getExchangeRates } = require('egypt-banks-scraper');
 `getExchangeRates` takes 3 arguments:
   - banks array: list of banks names to get its exchange rates
   - currencies array: list of currencies iso code to get from the banks
-  - callback function: called when finished
+  - callback function: called when finished with the signature (err, data)
 
 ### To get all banks with all currencies
 ```
-getExchangeRates([], [], (result) => {
-  // result
+getExchangeRates([], [], (err, data) => {
+  // data
 });
 ```
 
 ### To get All banks with certain currencies
 ```
 // Get only USD and EUR exchange rates from all banks
-getExchangeRates([], ['USD', 'EUR'], (result) => {
-  // result
+getExchangeRates([], ['USD', 'EUR'], (err, data) => {
+  // data
 });
 ```
 
 ### To get All exchange rates in certain banks
 ```
-getExchangeRates(['NBG', 'CIB'], [], (result) => {
-  // result
+getExchangeRates(['NBG', 'CIB'], [], (err, data) => {
+  // data
 });
 ```
 
 ### To get the exchange rates for some currencies and some banks
 ```
-getExchangeRates(['NBG', 'CIB'], ['USD', 'EUR'], (result) => {
-  // result
+getExchangeRates(['NBG', 'CIB'], ['USD', 'EUR'], (err, data) => {
+  // data
 });
 ```
-
-### Notes
-If
 
 ## Development
 
