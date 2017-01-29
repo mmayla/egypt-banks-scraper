@@ -13,7 +13,7 @@ let { getExchangeRates } = require('egypt-banks-scraper');
 ```
 
 `getExchangeRates` takes 3 arguments:
-  - banks array: list of banks names to get its exchange rates
+  - banks array: list of banks codes to get its exchange rates
   - currencies array: list of currencies iso code to get from the banks
   - callback function: called when finished with the signature (err, data)
 
@@ -47,26 +47,28 @@ getExchangeRates(['NBG', 'CIB'], ['USD', 'EUR'], (err, data) => {
 ```
 ## Banks
 ### Supported banks
-- National Bank of Greece
-- Credit Agricole
-- Central Bank of Egypt
-- National Bank of Egypt
-- Commercial International Bank (CIB)
-- Arab African International bank
-- Banque Du Caire
-- Banque Misr
-- Suez Canal Bank
-- AlBaraka Bank
-- Al Ahli bank of kuwait
-- Société Arabe Internationale de Banque (SAIB)
-- Misr Iran Development Bank
-- The United Bank of Egypt
-- Export Development Bank of Egypt
-- Alex Bank
-- Egyptian Gulf Bank
-- Abu Dhabi Islamic Bank
-- Faisal Islamic Bank Of Egypt
-- Blom Bank Egypt
+| Code | Bank Name                              |
+| ---- | -------------------------------------- |
+| NBG  | National Bank of Greece                |
+| CAE  | Credit Agricole                        |
+| CBE  | Central Bank of Egypt                  |
+| NBE  | National Bank of Egypt                 |
+| CIB  | Commercial International Bank          |
+| AAIB | Arab African International bank        |
+| BDC  | Banque Du Caire                        |
+| BM   | Banque Misr                            |
+| SCB  | Suez Canal Bank                        |
+| ABB  | Al Baraka Bank                         |
+| ABK  | Al Ahli bank of kuwait                 |
+| SAIB | Société Arabe Internationale de Banque |
+| MIDB | Misr Iran Development Bank             |
+| UBE  | The United Bank of Egypt               |
+| EDBE | Export Development Bank of Egypt       |
+| AB   | Alex Bank                              |
+| EGB  | Egyptian Gulf Bank                     |
+| ADIB | Abu Dhabi Islamic Bank                 |
+| FIBE | Faisal Islamic Bank Of Egypt           |
+| BBE  | Blom Bank Egypt                        |
 
 ### To support soon
 - HSBC
