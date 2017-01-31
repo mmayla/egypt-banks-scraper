@@ -9,7 +9,7 @@ npm install --save egypt-banks-scraper
 
 ### Require the package
 ```
-let { getExchangeRates } = require('egypt-banks-scraper');
+var { getExchangeRates } = require('egypt-banks-scraper');
 ```
 
 `getExchangeRates` takes 3 arguments:
