@@ -1,7 +1,5 @@
 # Egypt Banks Scraper [![Version](https://img.shields.io/npm/v/egypt-banks-scraper.svg)](https://www.npmjs.com/package/egypt-banks-scraper) [![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/MMayla/egypt-banks-scraper/blob/master/LICENSE) [![airbnb code style](https://img.shields.io/badge/code%20style-airbnb-fd5c63.svg)](https://github.com/airbnb/javascript)
 
----
-
 Scrape exchange rates from Egypt's banks
 
 ## Installation
