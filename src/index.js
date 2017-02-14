@@ -97,6 +97,7 @@ function getExchangeRates(banks, currencies, cb) {
               name: bank.name,
               rates: [],
             });
+            return;
           }
 
           // If currencies array empty get all rates
