@@ -11,7 +11,7 @@ npm install --save egypt-banks-scraper
 
 ### Require the package
 ```
-var { getExchangeRates } = require('egypt-banks-scraper');
+var EGBScraper = require('egypt-banks-scraper');
 ```
 
 `getExchangeRates` takes 3 arguments:
@@ -21,7 +21,7 @@ var { getExchangeRates } = require('egypt-banks-scraper');
 
 ### To get all banks with all currencies
 ```
-getExchangeRates([], [], (err, data) => {
+EGBScraper.getExchangeRates([], [], (err, data) => {
   // data
 });
 ```
@@ -29,21 +29,21 @@ getExchangeRates([], [], (err, data) => {
 ### To get All banks with certain currencies
 ```
 // Get only USD and EUR exchange rates from all banks
-getExchangeRates([], ['USD', 'EUR'], (err, data) => {
+EGBScraper.getExchangeRates([], ['USD', 'EUR'], (err, data) => {
   // data
 });
 ```
 
 ### To get All exchange rates in certain banks
 ```
-getExchangeRates(['NBG', 'CIB'], [], (err, data) => {
+EGBScraper.getExchangeRates(['NBG', 'CIB'], [], (err, data) => {
   // data
 });
 ```
 
 ### To get the exchange rates for some currencies and some banks
 ```
-getExchangeRates(['NBG', 'CIB'], ['USD', 'EUR'], (err, data) => {
+EGBScraper.getExchangeRates(['NBG', 'CIB'], ['USD', 'EUR'], (err, data) => {
   // data
 });
 ```

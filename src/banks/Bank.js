@@ -35,9 +35,10 @@ export default class Bank {
       let rates = null;
       if (!error && response.statusCode === 200) {
         rates = this.scraper(html);
+        finish(null, rates);
+      } else {
+        finish(new Error(`Error requisting ${this.name}`));
       }
-
-      finish(rates);
     });
   }
 }

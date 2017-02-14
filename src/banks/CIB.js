@@ -25,10 +25,13 @@ export default class CIB extends Bank {
       },
       body: JSON.stringify(JSON.parse('{ "lang": "en" }')),
     }, (error, response, body) => {
-      const currencyList = JSON.parse(body).d;
-      const rates = this.scraper(currencyList);
-
-      finish(rates);
+      try {
+        const currencyList = JSON.parse(body).d;
+        const rates = this.scraper(currencyList);
+        finish(null, rates);
+      } catch (err) {
+        finish(err);
+      }
     });
   }
 

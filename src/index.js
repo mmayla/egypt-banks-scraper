@@ -91,7 +91,14 @@ function getExchangeRates(banks, currencies, cb) {
       if (bank === null) throw new Error('No bank with the name', bankName);
 
       const bankPromise = new Promise((resolve) => {
-        bank.scrape((rates) => {
+        bank.scrape((err, rates) => {
+          if (err) {
+            resolve({
+              name: bank.name,
+              rates: [],
+            });
+          }
+
           // If currencies array empty get all rates
           const filteredRates = currencies.length === 0 ?
                                 rates : filterCurrencies(rates, currencies);
